@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+matplotlib
+xgboost
+shap
+torch
+tabpfn
+mljar-supervised
+openpyxl

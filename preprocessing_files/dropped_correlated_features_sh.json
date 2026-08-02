@@ -1,0 +1,10 @@
+[
+  "l5_mean_acc",
+  "m5_mean_acc",
+  "mean_acc_5to9",
+  "mvpa_acc_1min",
+  "mvpa_acc_5min",
+  "mvpa_bout1",
+  "mvpa_bout10",
+  "mvpa_bout5"
+]

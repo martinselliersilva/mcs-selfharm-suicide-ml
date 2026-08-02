@@ -1,0 +1,26 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Editor
+.vscode/
+.idea/
+
+# Office lock files
+~$*.docx
+~$*.xlsx
+
+# Restricted MCS data - never commit
+data/
+*.csv.raw

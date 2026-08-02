@@ -1,0 +1,13 @@
+Model,Top 1,SHAP 1,Top 2,SHAP 2,Top 3,SHAP 3,Top 4,SHAP 4,Top 5,SHAP 5
+XGBoost (AUCPR),Depression_binned,0.239167,FPEER_binned,0.22894,FEMOTION_binned,0.177694,mConscienc_binned,0.14716,SelfEsteem_binned,0.14114
+XGBoost (Balanced Acc),Depression_binned,0.238991,FPEER_binned,0.225394,FEMOTION_binned,0.179604,mConscienc_binned,0.148596,SelfEsteem_binned,0.142733
+XGBoost (F1 Weighted),FPEER_binned,0.254798,Depression_binned,0.252334,FEMOTION_binned,0.194454,cog_word_activity_binned,0.177532,SelfEsteem_binned,0.173729
+XGBoost (F1 (macro)),Depression_binned,0.238991,FPEER_binned,0.225394,FEMOTION_binned,0.179604,mConscienc_binned,0.148596,SelfEsteem_binned,0.142733
+LogReg (AUCPR),FPEER_binned,0.259318,mConscienc_binned,0.219058,Depression_binned,0.211396,cog_word_activity_binned,0.207644,sex_male,0.162763
+LogReg (Balanced Acc),FPEER_binned,0.251628,mConscienc_binned,0.214172,Depression_binned,0.207224,cog_word_activity_binned,0.205809,sex_male,0.152141
+LogReg (F1 Weighted),FPEER_binned,0.251628,mConscienc_binned,0.214172,Depression_binned,0.207224,cog_word_activity_binned,0.205809,sex_male,0.152141
+LogReg (F1 (macro)),FPEER_binned,0.254362,mConscienc_binned,0.21429,Depression_binned,0.208919,cog_word_activity_binned,0.204715,mReligion_christian,0.161087
+MLP (AUCPR),mvpa_acc_5sec,0.058583,mConscienc_binned,0.043084,FPEER_binned,0.043079,fAlcohol,0.042776,mean_acc_24h,0.042508
+MLP (Balanced Acc),fAlcohol,0.056048,mvpa_acc_5sec,0.0555,FPEER_binned,0.041616,mAlcohol_binary_high risk,0.039287,l5_hour_start,0.038641
+MLP (F1 Weighted),fAlcohol,0.05749,mvpa_acc_5sec,0.053812,FPEER_binned,0.042124,mAlcohol_binary_high risk,0.038722,mean_acc_24h,0.033701
+MLP (F1 (macro)),fAlcohol,0.050366,mvpa_acc_5sec,0.041707,FPEER_binned,0.038306,mConscienc_binned,0.031434,mAlcohol_binary_high risk,0.029023
