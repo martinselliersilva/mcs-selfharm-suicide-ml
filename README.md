@@ -12,6 +12,8 @@ Researchers wishing to reproduce these analyses can apply for access to the Mill
 
 For the same reason, per-participant model predictions (fold-level prediction files) are also excluded. Only aggregate/summary results (fold-level performance metrics, overall summaries, descriptive statistics, odds ratios, and SHAP visualizations) are included in `results/`.
 
+Univariable and multivariable logistic regression (odds ratio) analyses were conducted on two different samples, reflected in the `_full_sample` vs. `_actigraphy_only` suffixes used throughout `results/or/`: non-actigraphy predictors were analyzed in the full analytic sample (N = 1,321), while actigraphy-derived predictors were analyzed only among individuals with available actigraphy data (n = 575). The full-sample results are the primary odds-ratio results reported in the manuscript; the actigraphy-only results are retained since they are the only OR estimates available for actigraphy-derived predictors.
+
 ## Repository structure
 
 ```
@@ -33,9 +35,12 @@ LICENSE
 | `2_Preprocessing.ipynb` | Data cleaning, feature binning, and preprocessing of the raw MCS extract |
 | `Descriptive_table.ipynb` | Descriptive statistics and missingness summaries |
 | `missingness_analysis.ipynb` | Detailed missing-data analysis |
-| `OR_analyses.ipynb` | Univariable and multivariable logistic regression (odds ratios) |
-| `Forest_plot_univariate.ipynb` | Forest plot of univariable odds ratios |
-| `Forest_plot_multivariable.ipynb` | Forest plot of multivariable odds ratios |
+| `Preprocessing_OR_full_sample.ipynb` | Preprocessing for the primary odds-ratio analyses, run on the full analytic sample (N = 1,321); actigraphy columns are left with genuine missingness rather than imputed |
+| `Univariable_OR_full_sample.ipynb` | Univariable logistic regressions (odds ratios) on the full sample, with per-predictor sample size and Benjamini–Hochberg FDR correction |
+| `Multivariable_OR_full_sample.ipynb` | Multivariable logistic regression (adjusted odds ratios) on the full sample, entering the predictors that were FDR-significant in the univariable step |
+| `Forest_plot_multivariable.ipynb` | Forest plot of the full-sample multivariable odds ratios (primary Figure 2) |
+| `OR_analyses.ipynb` | Univariable and multivariable logistic regression restricted to the actigraphy subsample (n = 575); superseded as the primary OR analysis by the full-sample notebooks above, but retained since actigraphy-derived predictors are only evaluated in this subsample |
+| `Forest_plot_univariate.ipynb` | Forest plot of univariable odds ratios (actigraphy-subsample analysis) |
 | `3_Analyses.ipynb` | Main nested cross-validation machine learning pipeline (XGBoost, MLP, logistic regression), SHAP analysis |
 | `actig_only_sample.ipynb` | Preparation of the actigraphy subsample |
 | `Analyses_two_step.ipynb` | Two-stage classification (questionnaire-only, then + actigraphy) |
